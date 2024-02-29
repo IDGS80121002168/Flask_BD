@@ -1,0 +1,44 @@
+{% extends "layout2.html" %}
+
+{% block container %}
+{% import "_macros.html" as macros %}
+<h1>Hola desde Alumnos</h1>
+
+    <form action="" method="POST" novalidate>
+        <div class="row control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+                {{macros.camposNuevos(form.nombre, class='form-control')}}
+            </div>
+        </div>
+        <div class="row control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+                {{macros.camposNuevos(form.paterno, class='form-control')}}
+            </div>
+        </div>
+        <div class="row control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+                {{macros.camposNuevos(form.materno, class='form-control')}}
+            </div>
+        </div>
+        <div class="row control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+                {{macros.camposNuevos(form.email, class='form-control')}}
+            </div>
+        </div>
+        <div class="row control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+                {{macros.camposNuevos(form.edad, class='form-control')}}
+            </div>
+        </div>
+        <input type="summit" id="btn1" name="btn1" value="Registrar">
+    </form>
+    
+    <!--<h2>Escuela: {{titulo}}</h2>
+        {% for  nom in nombres%}
+            <h3>{{nom}}</h3>
+
+        {%endfor%}-->
+        <h1>Nombre: {{nombre}}</h1>
+        <h1>apepaterno: {{apepaterno}}</h1>
+        <h1>amaterno: {{amaterno}}</h1>
+{%endblock%}
